@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AudioFileListActivity" >
+
+    <RelativeLayout
+        android:id="@+id/activity_audio_file_list_rl_play_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1F1F1F"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/activity_audio_file_list_tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="00:00"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/activity_audio_file_list_tv_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="00:00"
+            android:textColor="@android:color/white" />
+
+        <SeekBar
+            android:id="@+id/activity_audio_file_list_pb"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/activity_audio_file_list_tv_remaining"
+            android:layout_toRightOf="@+id/activity_audio_file_list_tv_progress" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/activity_audio_file_list_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/activity_audio_file_list_rl_play_progress"
+        android:cacheColorHint="@android:color/transparent" >
+    </ListView>
+
+</RelativeLayout>
